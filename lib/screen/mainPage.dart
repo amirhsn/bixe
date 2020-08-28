@@ -43,6 +43,11 @@ class _MainPageState extends State<MainPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Color.fromRGBO(71, 66, 66, 1),
+      drawer: HiddenDrawerMenu(
+        backgroundColorMenu: Colors.amber,
+        backgroundColorAppBar: Colors.cyan,
+        screens: items,
+      ),
       body: Column(
         children: <Widget>[
           Expanded(
