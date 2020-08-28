@@ -2,6 +2,7 @@ import 'package:bixe/component/appBar.dart';
 import 'package:flutter/material.dart';
 import 'package:shimmer/shimmer.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:hidden_drawer_menu/hidden_drawer_menu.dart';
 
 class MainPage extends StatefulWidget {
   @override
