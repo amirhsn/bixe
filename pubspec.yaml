@@ -25,6 +25,7 @@ dependencies:
   cupertino_icons: ^0.1.2
   font_awesome_flutter: ^8.8.1
   shimmer: ^1.1.1
+  hidden_drawer_menu: ^2.0.1
   
 dev_dependencies:
   flutter_test:
