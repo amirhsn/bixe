@@ -1,7 +1,7 @@
-import 'package:bixe/component/appBar.dart';
 import 'package:flutter/material.dart';
 import 'package:shimmer/shimmer.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:hidden_drawer_menu/hidden_drawer_menu.dart';
 
 class MainPage extends StatefulWidget {
   @override
@@ -14,12 +14,45 @@ class _MainPageState extends State<MainPage> {
   bool engineStat = false;
   bool hornStat = false;
 
+  List<ScreenHiddenDrawer> items = new List();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Color.fromRGBO(71, 66, 66, 1),
       body: Column(
         children: <Widget>[
+          Expanded(
+            flex: 1,
+            child: Container(
+              padding: EdgeInsets.only(top: 20),
+              color: Color.fromRGBO(71, 66, 66, 1),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: <Widget>[
+                  IconButton(
+                    icon: Icon(
+                      Icons.menu,
+                      color: Colors.white,
+                    ),
+                    onPressed: (){},
+                  ),
+                  Text(
+                    'BIXE',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontWeight: FontWeight.w100,
+                      fontSize: 20.0,
+                      letterSpacing: 5.0,
+                    ),
+                  ),
+                  SizedBox(
+                    width: 40,
+                  ),
+                ],
+              ),
+            ),
+          ),
           Expanded(
             flex: 1,
             child: Container(
