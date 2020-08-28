@@ -15,6 +15,29 @@ class _MainPageState extends State<MainPage> {
   bool engineStat = false;
   bool hornStat = false;
 
+  List<ScreenHiddenDrawer> items = new List();
+
+  @override
+  void initState() {
+    items.add(new ScreenHiddenDrawer(
+        new ItemHiddenMenu(
+          name: "Help",
+          baseStyle: TextStyle( color: Colors.white.withOpacity(0.8), fontSize: 28.0 ),
+          colorLineSelected: Colors.teal,
+        ),
+        HelpPage()));
+
+    items.add(new ScreenHiddenDrawer(
+        new ItemHiddenMenu(
+          name: "About",
+          baseStyle: TextStyle( color: Colors.white.withOpacity(0.8), fontSize: 28.0 ),
+          colorLineSelected: Colors.orange,
+        ),
+        AboutPage()));
+
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
