@@ -1,4 +1,6 @@
 import 'package:bixe/component/appBar.dart';
+import 'package:bixe/screen/aboutPage.dart';
+import 'package:bixe/screen/helpPage.dart';
 import 'package:flutter/material.dart';
 import 'package:shimmer/shimmer.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
