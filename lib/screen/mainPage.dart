@@ -1,10 +1,7 @@
 import 'package:bixe/component/appBar.dart';
-import 'package:bixe/screen/aboutPage.dart';
-import 'package:bixe/screen/helpPage.dart';
 import 'package:flutter/material.dart';
 import 'package:shimmer/shimmer.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:hidden_drawer_menu/hidden_drawer_menu.dart';
 
 class MainPage extends StatefulWidget {
   @override
@@ -17,33 +14,9 @@ class _MainPageState extends State<MainPage> {
   bool engineStat = false;
   bool hornStat = false;
 
-  List<ScreenHiddenDrawer> items = new List();
-
-  @override
-  void initState() {
-    items.add(new ScreenHiddenDrawer(
-        new ItemHiddenMenu(
-          name: "Help",
-          baseStyle: TextStyle( color: Colors.white.withOpacity(0.8), fontSize: 28.0 ),
-          colorLineSelected: Colors.teal,
-        ),
-        HelpPage()));
-
-    items.add(new ScreenHiddenDrawer(
-        new ItemHiddenMenu(
-          name: "About",
-          baseStyle: TextStyle( color: Colors.white.withOpacity(0.8), fontSize: 28.0 ),
-          colorLineSelected: Colors.orange,
-        ),
-        AboutPage()));
-
-    super.initState();
-  }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: BuildAppBar(),
       backgroundColor: Color.fromRGBO(71, 66, 66, 1),
       body: Column(
         children: <Widget>[
